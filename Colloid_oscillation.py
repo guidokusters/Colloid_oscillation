@@ -214,7 +214,7 @@ factor = 1.0
 # Possibility to include a space cushion for the contact function
 eps = 0.0
 # Driving frequency
-omega0 = 1.0
+omega = 1.0
 
 # Create time array
 # Number of oscillations to average over
@@ -231,5 +231,5 @@ no_osc = max(int(omega*max(2.*np.pi*no_osc/omega,1500)/(2.*np.pi)),no_osc)
 index1 = round(2.*np.pi/(omega*dt)*int(no_osc/2))
 index2 = round(2.*np.pi/(omega*dt)*no_osc)
 # Compute average volume and amplitude
-vavg[j] = np.mean(z[index1:index2,2])
-amp[j] = (np.max(z[index1:index2,0])-np.min(z[index1:index2,0]))/2.
+vavg = np.mean(z[index1:index2,2])
+amp = (np.max(z[index1:index2,0])-np.min(z[index1:index2,0]))/2.
